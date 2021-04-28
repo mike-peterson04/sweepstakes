@@ -1,9 +1,10 @@
 from contestant import Contestant
 from sweepstake import Sweepstake
+import user_interface
 
 
 def run_simulation():
-    contestants = generate_test_users()
+    contestants = user_interface.generate_test_users()
     s = Sweepstake('test')
     for x in contestants:
         s.register_contestant(x)

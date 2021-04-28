@@ -1,5 +1,6 @@
 from sweepstake import Sweepstake
 from data_stack import Stack
+import user_interface
 
 
 class SweepstakesStackManager:

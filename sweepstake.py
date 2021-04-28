@@ -1,4 +1,5 @@
 import user_interface
+import random
 
 
 class Sweepstake:
@@ -7,7 +8,7 @@ class Sweepstake:
         self.contestants = {}
 
     def register_contestant(self,contestant):
-        pass
+        self.contestants[len(self.contestants)] = contestant
 
     def pick_winner(self):
         pass

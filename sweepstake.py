@@ -7,11 +7,14 @@ class Sweepstake:
         self.name = name
         self.contestants = {}
 
-    def register_contestant(self,contestant):
+    def register_contestant(self, contestant):
         self.contestants[len(self.contestants)] = contestant
 
     def pick_winner(self):
-        pass
+        return self.contestants[random.randint(0, len(self.contestants))]
 
-    def print_contestant_info(self,contestant):
-        pass
+    def print_contestant_info(self, contestant):
+
+        result = ["First Name ", contestant.first_name, "Last Name ", contestant.last_name, "Email Address ",
+                  contestant.email, "Registration Number ", contestant.registration_number]
+        user_interface.text_print(result)

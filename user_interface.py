@@ -32,3 +32,10 @@ def generate_test_users():
                                       f"{first_name[i-1]}.{last_name[i-1]}@hypothetical.com", i))
         i += 1
     return contestants
+
+def text_print(to_print =[]):
+
+    i = 0
+    while i < len(to_print):
+        print(f"{to_print[i]}:{to_print[i+1]}")
+        i += 2

@@ -1,6 +1,4 @@
-from sweepstake import Sweepstake
 from data_stack import Stack
-import user_interface
 
 
 class SweepstakesStackManager:
@@ -8,7 +6,8 @@ class SweepstakesStackManager:
         self.stack = Stack()
 
     def insert_sweepstakes(self, sweepstakes):
-        pass
+        self.stack.push(sweepstakes)
 
     def get_sweepstakes(self):
-        pass
+        result = self.stack.pop()
+        return result

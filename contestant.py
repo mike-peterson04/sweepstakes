@@ -11,6 +11,9 @@ class Contestant:
         self.email = email
 
     def notify (self, is_winner):
+        # prior to running code create a file called mailer.py and put 2 variables in it
+        # manager_email and manager_password store the email login information
+        # of your gmail or gsuite account into those variables as strings for the mail client to send
 
         yagmail.register(mailer.manager_email,mailer.manager_password)
         if is_winner:

@@ -66,7 +66,7 @@ def name_sweepstake():
 
 def notify_contestants(sweepstake, winner_id):
     # remove before submission this is a test process
-    sweepstake.temporary_test()
+    # sweepstake.temporary_test()
     count = 0
     while count < len(sweepstake.contestants):
         if sweepstake.contestants[count].registration_number == winner_id.registration_number:

@@ -19,10 +19,10 @@ class Sweepstake:
                   contestant.email, "Registration Number ", contestant.registration_number]
         user_interface.text_print(result)
 
-    def temporary_test(self):
-
-        counter = 0
-
-        while counter < len(self.contestants):
-            self.contestants[counter].email = f"uchiha.sasuke99+{+counter}@gmail.com"
-            counter += 1
+    # def temporary_test(self):
+    #
+    #     counter = 0
+    #
+    #     while counter < len(self.contestants):
+    #         self.contestants[counter].email = f"uchiha.sasuke99+{+counter}@gmail.com"
+    #         counter += 1

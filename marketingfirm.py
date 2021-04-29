@@ -1,4 +1,5 @@
 import user_interface
+from sweepstake import Sweepstake
 
 
 class MarketingFirm:
@@ -6,5 +7,6 @@ class MarketingFirm:
         self.manager = manager
 
     def create_sweepstakes(self):
-        pass
+        sweepstake = Sweepstake(user_interface.name_sweepstake())
+        self.manager.insert_sweepstakes(sweepstake)
 

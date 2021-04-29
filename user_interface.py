@@ -58,3 +58,6 @@ def select_manager():
                 print("Please enter 1 or 2")
         except ValueError:
             print("Please enter 1 or 2")
+
+def name_sweepstake():
+    return input("What do you want to name this Sweepstake? ")

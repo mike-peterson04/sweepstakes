@@ -1,5 +1,6 @@
 from contestant import Contestant
-
+from sweepstakesstackmanager import SweepstakesStackManager
+from sweepstakesqueuemanager import SweepstakesQueueManager
 
 def generate_test_users():
     first_name = ['Liam', 'Noah', 'Jackson', 'Aiden', 'Elijah', 'Grayson', 'Lucas', 'Oliver',
@@ -33,9 +34,27 @@ def generate_test_users():
         i += 1
     return contestants
 
-def text_print(to_print =[]):
+
+def text_print(to_print):
 
     i = 0
     while i < len(to_print):
         print(f"{to_print[i]}:{to_print[i+1]}")
         i += 2
+
+
+def select_manager():
+
+    print("press 1 for Stack Manager")
+    print("press 2 for Queue Manager")
+    while True:
+        try:
+            check = int(input())
+            if check == 1:
+                return SweepstakesStackManager()
+            elif check == 2:
+                return SweepstakesQueueManager()
+            else:
+                print("Please enter 1 or 2")
+        except ValueError:
+            print("Please enter 1 or 2")

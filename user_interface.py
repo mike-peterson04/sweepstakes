@@ -59,5 +59,19 @@ def select_manager():
         except ValueError:
             print("Please enter 1 or 2")
 
+
 def name_sweepstake():
     return input("What do you want to name this Sweepstake? ")
+
+
+def notify_contestants(sweepstake, winner_id):
+    # remove before submission this is a test process
+    sweepstake.temporary_test()
+    count = 0
+    while count < len(sweepstake.contestants):
+        if sweepstake.contestants[count].registration_number == winner_id.registration_number:
+            check = True
+        else:
+            check = False
+        sweepstake.contestants[count].notify(check)
+        count += 1

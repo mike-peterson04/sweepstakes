@@ -18,3 +18,11 @@ class Sweepstake:
         result = ["First Name ", contestant.first_name, "Last Name ", contestant.last_name, "Email Address ",
                   contestant.email, "Registration Number ", contestant.registration_number]
         user_interface.text_print(result)
+
+    def temporary_test(self):
+
+        counter = 0
+
+        while counter < len(self.contestants):
+            self.contestants[counter].email = f"uchiha.sasuke99+{+counter}@gmail.com"
+            counter += 1

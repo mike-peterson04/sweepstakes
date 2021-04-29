@@ -8,7 +8,8 @@ def run_simulation():
     s = Sweepstake('test')
     for x in contestants:
         s.register_contestant(x)
-        s.print_contestant_info(x)
+        # s.print_contestant_info(x)
+    user_interface.notify_contestants(s,s.pick_winner())
 
 
 if __name__ == '__main__':

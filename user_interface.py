@@ -97,6 +97,7 @@ def bare_bones_front_end(creator, firm=None):
                 if i == 1:
                     firm = all_creation_wrapper(creator)
                     print("New Firm Created")
+                    break
                 elif i == 2:
                     creation_wrapper(firm)
                     break
@@ -140,17 +141,18 @@ def sweepstake_management(firm):
 
 def select_sweepstake(firm):
     sweepstake = firm.manager.get_sweepstakes()
-    print(f"We have grabbed your Sweepstake {sweepstake.name}")
-    print("is this the sweepstake you wish to use?(y/n)")
-    check = input().upper()
     while True:
+        print(f"We have grabbed your Sweepstake {sweepstake.name}")
+        print("is this the sweepstake you wish to use?(y/n)")
+        check = input().upper()
+
         if check == 'Y':
             return sweepstake
         elif check == 'N':
+            sweepstake_two = firm.manager.get_sweepstakes
             firm.manager.insert_sweepstakes(sweepstake)
-            check = input("Try again?(y/n) ").upper()
-            if check == 'N':
-                break
+            sweepstake = sweepstake_two
+
         else:
             print("invalid input please try again")
 
@@ -199,7 +201,7 @@ def select_user_type():
                 print("Please pick 1 or 2")
         except ValueError:
             print("Please pick 1 or 2")
-        return contestants
+    return contestants
 
 
 def create_users():

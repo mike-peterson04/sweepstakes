@@ -1,5 +1,6 @@
 from contestant import Contestant
 from sweepstake import Sweepstake
+from marketingfirmcreator import MarketingFirmCreator
 import user_interface
 
 # project requires package yagmail to be installed
@@ -7,12 +8,7 @@ import user_interface
 
 
 def run_simulation():
-    contestants = user_interface.generate_test_users()
-
-    s = Sweepstake('test')
-    for x in contestants:
-        s.register_contestant(x)
-    user_interface.notify_contestants(s, s.pick_winner())
+    user_interface.bare_bones_front_end(MarketingFirmCreator())
 
 
 if __name__ == '__main__':

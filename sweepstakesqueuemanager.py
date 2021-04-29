@@ -1,4 +1,3 @@
-import user_interface
 from data_queue import Queue
 
 
@@ -7,7 +6,8 @@ class SweepstakesQueueManager:
         self.stack = Queue()
 
     def insert_sweepstakes(self, sweepstakes):
-        pass
+        self.stack.enqueue(sweepstakes)
 
     def get_sweepstakes(self):
-        pass
+        result = self.stack.dequeue()
+        return result
